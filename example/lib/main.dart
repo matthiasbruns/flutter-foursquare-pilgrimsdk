@@ -28,7 +28,10 @@ class _MyAppState extends State<MyApp> {
     _sdkInitialized = false;
 
     try {
-      await FlutterFoursquarePilgrimsdk.init;
+      await FlutterFoursquarePilgrimsdk.init(
+        clientId: "54G52IPKKBMW4HONX21OJX3BTWDHZN2TNYRLPDUGQXZVN3LZ",
+        clientSecret: "FC4E0AX1FJ0NUYFF01QOXXNPHQ4FJ5GN2ADTF1NEHXBZULYT",
+      );
       _sdkInitialized = true;
       _sdkStatusMessage = "SDK initialized";
     } catch (err) {
